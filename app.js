@@ -341,18 +341,49 @@
 // 	return res;
 // }
 
-let num = 12345;
-let res = getDigitsSum(num);
-console.log(res);
+// let num = 12345;
+// let res = getDigitsSum(num);
+// console.log(res);
 
-function getDigitsSum(num) {
-  let numStr = num.toString(); // Преобразовываем число в строку
-  let arr = numStr.split(''); // Разбиваем строку на символы
-  let sum = 0;
+// function getDigitsSum(num) {
+//   let numStr = num.toString(); // Преобразовываем число в строку
+//   let arr = numStr.split(''); // Разбиваем строку на символы
+//   let sum = 0;
 
-  for (let elem of arr) {
-    sum += parseInt(elem); // Преобразуем символ обратно в число перед сложением
-  }
+//   for (let elem of arr) {
+//     sum += parseInt(elem); // Преобразуем символ обратно в число перед сложением
+//   }
 
-  return sum;
-}
+//   return sum;
+// }
+
+// console.log(isPrime(20)); // должен вывести true
+
+// function isPrime(num) {
+// 	for (let i = 2; i < num; i++) {
+// 		if (num % i != 0) {
+// 			return true;
+// 		} else {
+// 			return false;
+// 		}
+// 	}
+// }
+
+//Практика на функции в JavaScript
+
+// const arr = [1,2, 3, 4, 5]
+// function func(arr){
+//   let sam  = 0
+//   for (let elem of arr){
+//     sam+= elem 
+//   }
+//   return sam
+// }
+// console.log(func(arr))
+
+// let a  = ['A', 'B', 'C']
+// console.log(a.reverse())
+
+//===Глобальные переменные в функциях в JavaScript
+
+
