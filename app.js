@@ -386,4 +386,274 @@
 
 //===Глобальные переменные в функциях в JavaScript
 
+// function func() {
+// 	console.log(num);
+// }
 
+// let num;
+
+// num = 1;
+// func();
+
+// num = 2;
+// func();
+
+//Локальные переменные в функциях в JavaScript
+
+// function func() {
+// 	let num = 5; // локальная переменная
+// 	return num
+// }
+
+// console.log(func()); // ничего не выведет, а выдаст ошибку в консоль
+
+// function func() {
+// 	let num = 5;
+// 	return num;
+// }
+
+// console.log(num);\\
+
+// function func() {
+// 	let num = 5;
+// 	return num;
+// }
+
+// console.log(func());
+
+//Одинаковые имена переменных в функциях в JavaScript
+
+// let num = 1;
+
+// function func() {
+// 	num = 2;
+// }
+// func();
+
+// console.log(num);
+
+//Изменение глобальных переменных в JavaScript
+
+// let num = 1;
+
+// function func() {
+// 	let num = 2;
+// }
+// func();
+
+// console.log(num);
+
+// let num = 1;
+
+// function func() {
+// 	let num = 2;
+//     return num
+// }
+
+// console.log(num);
+// console.log(func());
+
+// let num = 1;
+
+// function func() {
+// 	num = 2;
+// }
+
+// console.log(num);
+// func();
+
+// let num = 1;
+
+// function func() {
+// 	num++;
+// }
+
+// func();
+// func();
+// func();
+// console.dir(num);
+
+// function func() {
+// 	num = 2;
+// }
+
+// let num = 1;
+// console.log(num);
+// func();
+
+// function func() {
+// 	num = 2;
+// }
+
+// let num = 1;
+// func();
+// console.log(num);
+
+//Глобальные переменные и параметры функций в JavaScript
+
+// function func(localNum) {
+// 	console.log(localNum);
+// }
+
+// func(1);
+
+// function func(localNum) {
+// 	console.log(localNum);
+// }
+
+// let num = 1;
+// func(num);
+// num = 2;
+// func(num)
+
+// function func(localNum) {
+// 	localNum = 2;
+// }
+
+// let num = 1;
+// func(num);
+// console.log(num);
+
+// function func(localNum) {
+// 	let num = 2;
+//     return console.log(num)
+// }
+
+// let num = 1;
+// func(num);
+// console.log(num);
+
+//Совпадение имен с параметрами в JavaScript
+
+// function func(num) {
+// 	console.log(num);
+// }
+
+// let num = 1;
+// func(num);
+
+// function func() {
+// 	num = 2;
+// }
+
+// let num = 1;
+// func();
+// console.log(num);
+
+// function func() {
+// 	let num = 2;
+// }
+
+// let num = 1;
+// func();
+// console.log(num);
+
+//Параметры-объекты JavaScript
+
+
+// function func(obj) {
+// 	obj.a = '!';
+//     obj.b = 'Hi'
+// }
+
+// let obj = {a: 1, b: 2, c: 3};
+// func(obj);
+// console.log(obj);
+
+// function func(arg) {
+// 	arg = '!';
+// }
+
+// let obj = {a: 1, b: 2, c: 3};
+// func(obj.a);
+// console.log(obj);
+
+// function func(obj) {
+// 	obj = '!';
+// }
+
+// let obj = {a: 1, b: 2, c: 3};
+// func(obj.a);
+// console.log(obj);
+
+// function func(arr) {
+// 	arr.splice(1, 1);
+// }
+
+// let arr = [1, 2, 3];
+// func(arr);
+// console.log(arr);
+
+// function func(arr) {
+// 	arr.slice(1, 1);
+// }
+
+// let arr = [1, 2, 3];
+// func(arr);
+// console.log(arr);
+
+// function func(arr) {
+// 	let newArr = arr;
+// 	newArr[0] = '!';
+// }
+
+// let arr = [1, 2, 3];
+// func(arr);
+// console.log(arr);
+
+//Исходный код функции и ее результат в JavaScript
+
+// function func(){
+//     return 'This is my an umbrella'
+// }
+
+// console.log(func)
+
+//Функция как переменная в JavaScript
+
+// function func(){
+//     return 'My name is Lux'
+// }
+
+// func = 123
+// console.log(func)
+
+// function func1(){
+//     return 3
+// }
+
+// let func2 = func1
+// console.log(func1())
+// console.log(func2())
+
+// let func1 = function(){
+//     return 1
+// }
+
+// let func2 = function(){
+//     return 2
+// }
+
+// let sum = func1() + func2()
+
+// alert(sum)
+
+//Function expression и Function declaration в JavaScript
+
+// const func = function x(){
+//     return 'Hi my friend'
+// }
+// alert(func())
+
+// let func1 = function() {console.log('!')};
+// let func2 = function() {
+// 	console.log('!');
+// };
+// function func3() {
+// 	console.log('!');
+// }
+// func1()
+// func2()
+// func3()
+
+//Нюансы функциональных выражений в JavaScript
