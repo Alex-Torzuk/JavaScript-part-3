@@ -1,0 +1,25 @@
+/* .img1,  .img2{
+    width: 200px;
+} */
+
+/* #contain{
+    border: 1px solid black;
+    height: 100px;
+    width: 100px;
+}
+
+.btn{
+    margin: 20px;
+} */
+
+.colors{
+    color: red;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.line{
+    text-decoration: line-through;
+}
