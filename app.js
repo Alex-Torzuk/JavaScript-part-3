@@ -3181,39 +3181,27 @@
     // }
 
 
-    let inputs = document.querySelectorAll('input')
-    let button = document.querySelector('#btn')
+    let inputs = document.querySelectorAll('input');
+    let button = document.querySelector('#btn');
 
-   
-// for(let text of texts){
-//     console.log(text)
-// }
+    let texts = [
+        'text1',
+        'text2',
+        'text3',
+    ];
 
-// for(let text of texts){
-//     for(let elem of inputs){
-//         button.addEventListener('click', function (){
-            
-//                 if(elem.value == text){
-//                     console.log(true)
-//                 }else{
-//                     console.log(false)
-//                 }
-//             }
-//         )
-//     }
+    button.addEventListener('click', function() {
+        for (let input of inputs) {
+            if (texts.includes(input.value)) {
+                input.classList.remove('wrong'); // Убираем класс "wrong", если он был добавлен
+                input.classList.add('right');
+            } else {
+                input.classList.remove('right'); // Убираем класс "right", если он был добавлен
+                input.classList.add('wrong');
+            }
+        }
+    });
     
-// }
 
-// button.addEventListener('click',function() {
-// 	for (let input of inputs) {
-// 		for (let text of texts) {
-// 			if (input.value === text) {
-// 				console.log('right')
-// 			} else {
-// 				console.log('wrong')
-// 			}
-// 		}
-// 	}
-// });
     
     
