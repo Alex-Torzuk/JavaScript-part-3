@@ -3181,27 +3181,55 @@
     // }
 
 
-    let inputs = document.querySelectorAll('input');
-    let button = document.querySelector('#btn');
+    // let inputs = document.querySelectorAll('input');
+    // let button = document.querySelector('#btn');
 
-    let texts = [
-        'text1',
-        'text2',
-        'text3',
-    ];
+    // let texts = [
+    //     'text1',
+    //     'text2',
+    //     'text3',
+    // ];
 
-    button.addEventListener('click', function() {
-        for (let input of inputs) {
-            if (texts.includes(input.value)) {
-                input.classList.remove('wrong'); // Убираем класс "wrong", если он был добавлен
-                input.classList.add('right');
-            } else {
-                input.classList.remove('right'); // Убираем класс "right", если он был добавлен
-                input.classList.add('wrong');
-            }
-        }
-    });
+    // button.addEventListener('click', function() {
+    //     for (let input of inputs) {
+    //         if (texts.includes(input.value)) {
+    //             input.classList.remove('wrong'); // Убираем класс "wrong", если он был добавлен
+    //             input.classList.add('right');
+    //         } else {
+    //             input.classList.remove('right'); // Убираем класс "right", если он был добавлен
+    //             input.classList.add('wrong');
+    //         }
+    //     }
+    // });
+
+    // let inputs = document.querySelectorAll('input')
+    // let btn = document.querySelector('#btn')
+    // let sum = 0
+    // btn.addEventListener('click', function(){
+    //     for(let input of inputs){
+    //         sum+= Number(input.value)
+    //     }
+    //     console.log(sum)
+    // })
     
+
+    // let inp1 = document.querySelector('#inp1')
+    // let inp2 = document.querySelector('#inp2')
+    // let inp3 = document.querySelector('#inp3')
+    // let btn = document.querySelector('#btn')
+    // btn.addEventListener('click', function(){
+    //     inp3.value = Number(inp1.value) + Number(inp2.value)
+    // })
+
+
+    // let inp = document.querySelector('#inp')
+    // inp.addEventListener('blur', ()=>{
+    //     console.log('Hello Alex')
+    // })
+
+
+
+    //======Отработка изученного материала на работу с DOM
 
     
     
