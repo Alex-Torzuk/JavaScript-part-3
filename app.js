@@ -3230,6 +3230,68 @@
 
 
     //======Отработка изученного материала на работу с DOM
+//1
+// let input = document.querySelector('input')
+// let p = document.querySelector('p')
+// input.addEventListener('blur', ()=>{
+//     p.textContent += input.value
+// })
+    
+//2
+// let inp1 = document.querySelector('#inp1')
+// let inp2 = document.querySelector('#inp2')
+// let sum = document.querySelector('p')
+// let btn = document.querySelector('button')
+// btn.addEventListener('click', ()=>{
+//     sum.textContent += +inp1.value + +inp2.value
+// })   
 
+//3
+//4
+//5
+// let inp1 = document.querySelector('.inp1')
+// let inp2 = document.querySelector('.inp2')
+// let inp3 = document.querySelector('.inp3')
+// let inp4 = document.querySelector('.inp4')
+// inp1.addEventListener('blur', function(){
+//     inp2.value = inp1.value[0]
+//     inp3.value = inp1.value[2]
+//     inp4.value = inp1.value[4]
+// })
+
+//===========Работа с текстареа в JavaScript
+
+// let elem = document.querySelector('#elem')
+// let p = document.querySelector('p')
+// elem.addEventListener('blur', ()=>{
+//     p.textContent = p.textContent += ' ' + elem.value  
+// })
+
+//Атрибут disabled в JavaScript
+
+// let inp = document.querySelector('input')
+// let btn1 = document.querySelector('.btn1')
+// let btn2 = document.querySelector('.btn2')
+// btn1.addEventListener('click', ()=>{
+//     inp.setAttribute("disabled", "disabled")
+// })
+// btn2.addEventListener('click', ()=>{
     
+//         inp.disabled = false
     
+// })
+
+
+// let btn = document.querySelector('button')
+// btn.addEventListener('click', ()=>{
+//     inp.setAttribute("disabled", "disabled")
+// })
+
+// let inp = document.querySelector('input')
+// let btn = document.querySelector('button')
+// btn.addEventListener('click', ()=>{
+//     inp.setAttribute('disabled', 'disabled')
+//     if(inp.getAttribute('disabled')){
+//         console.log('Заблокирован инпут')
+//     } else(console.log('Разблокирован инпут'))
+// })
