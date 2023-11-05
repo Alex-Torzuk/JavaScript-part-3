@@ -3424,3 +3424,14 @@
 // })
 
 //Методы focus и blur в JavaScript
+
+
+// let elem   = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+
+// button.addEventListener('click', function() {
+// 	elem.focus();
+// });
+
+let inp1 = document.querySelector('#inp1')
+let inp2 = document.querySelector('#inp2')
