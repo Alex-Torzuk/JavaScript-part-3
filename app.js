@@ -3435,3 +3435,11 @@
 
 let inp1 = document.querySelector('#inp1')
 let inp2 = document.querySelector('#inp2')
+inp1.addEventListener('click', function(){
+    if(inp1.value.length >= 2){
+        inp2.focus()
+    }
+    if(inp2.value.length >=2){
+        inp2.blur()
+    }     
+})
