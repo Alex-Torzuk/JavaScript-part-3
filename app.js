@@ -3423,6 +3423,256 @@
 //     }
 // })
 
+//=============Работа с текстареа в JavaScript
+
+// let elem = document.querySelector('#elem')
+// let p = document.querySelector('p')
+
+// elem.addEventListener('blur', ()=>{
+//     p.textContent = elem.value
+// })
+
+//Атрибут disabled в JavaScript
+
+// let input = document.querySelector('#inp')
+// let btn = document.querySelector('#btn')
+// btn.addEventListener('click', ()=>{
+//     input.setAttribute('disabled', 'disabled')
+    
+// })
+
+// let input = document.querySelector('#inp')
+// let btn1 = document.querySelector('#btn1')
+// let btn2 = document.querySelector('#btn2')
+
+// btn1.addEventListener('click', ()=>{
+//     input.setAttribute('disabled', 'disabled')
+// })
+
+// btn2.addEventListener('click', ()=>{
+//     input.disabled = false
+// })
+
+// let input = document.querySelector('#inp')
+// let btn = document.querySelector('#btn')
+// btn.addEventListener('click', ()=>{
+//     if(input.disabled){
+//         console.log('Инпут заблокирован')
+//     } else{
+//         console.log('Инпут не заблокирован')
+//     }
+// })
+
+//Работа с чекбоксами в JavaScript
+
+// let input = document.querySelector('#inp')
+// let btn1 = document.querySelector('#btn-1')
+// let btn2 = document.querySelector('#btn-2')
+// btn1.addEventListener('click', ()=>{
+//     input.setAttribute('checked', 'checked')
+// })
+
+// btn2.addEventListener('click', ()=>{
+//     input.checked = false
+// })
+
+// let input = document.querySelector('#inp')
+// let p = document.querySelector('p')
+// let btn = document.querySelector('#btn')
+// btn.addEventListener('click', ()=>{
+//     if(input.checked){
+//         p.textContent = 'Hello'
+//     }else{
+//         p.textContent = 'by'
+//     }
+// })
+
+//Чередование атрибутов без значений
+// let input = document.querySelector('#inp')
+// let btn = document.querySelector('#btn')
+// btn.addEventListener('click', ()=>{
+//     if(input.checked){
+//         input.checked = false
+//     } else {
+//         input.checked = true
+//     }
+// })
+
+
+//Работа с радиокнопками в JavaScript
+
+
+// let radios = document.querySelectorAll('input[type="radio"]');
+// let p = document.querySelector('p')
+// let button = document.querySelector('#button');
+
+// button.addEventListener('click', ()=>{
+//     for(let radio of radios){
+//         if(radio.checked){
+//             p.textContent = radio.value
+//         }
+//     }
+// })
+
+
+// button.addEventListener('click', function() {
+// 	for (let radio of radios) {
+// 		if (radio.checked) {
+// 			console.log(radio.value);
+// 		}
+// 	}
+// });
+
+//Событие change в JavaScript
+
+// let input = document.querySelector('#inp')
+// let p = document.querySelector('p')
+
+// input.addEventListener('change', ()=> {
+//     p.textContent = input.value
+// })
+
+// let input = document.querySelector('#inp')
+// input.addEventListener('change', ()=>{
+//     if(input.checked){
+//         console.log('true')
+//     }
+// })
+
+
+// let h1 = document.querySelector('h1')
+// h1.textContent = 'for IT'
+
+
+// let input = document.querySelector('#input')
+// input.addEventListener('change', ()=>{
+//     if(input.value.length <= 5){
+//         input.style.borderColor = 'green'
+//     } else {
+//         input.style.borderColor = 'red'
+//     }
+// })
+
+// Событие input в JavaScript
+
+// let input = document.querySelector('#input')
+// let p = document.querySelector('p')
+// input.addEventListener('input', ()=>{
+//     if(input.value.length == 5){
+//         p.textContent = input.value.length
+//     }
+// })
+
+// var textInput = document.getElementById("textInput");
+//     var remainingChars = document.getElementById("remainingChars");
+
+//     textInput.addEventListener("input", function() {
+//         var maxLength = parseInt(textInput.getAttribute("maxlength"));
+//         var currentLength = textInput.value.length;
+//         var remaining = maxLength - currentLength;
+
+//         if (remaining >= 0) {
+//             remainingChars.textContent = "Осталось символов: " + remaining;
+//         } else {
+//             remainingChars.textContent = "Превышено на: " + Math.abs(remaining);
+//         }
+//     });
+
+
+//Методы focus и blur в JavaScript
+
+// let inp1 = document.querySelector('#inp1')
+// let inp2 = document.querySelector('#inp2')
+
+// inp1.addEventListener('input', function(){
+//     if (inp1.value.length == 2){
+//         inp2.focus()
+//     }
+    
+// })
+
+// inp2.addEventListener('input', function(){
+//     if (inp2.value.length == 2){
+//         inp2.blur()
+//     }
+// })
+
+
+//Работа с выпадающими списками в JavaScript
+
+// let elem = document.querySelector('#select')
+
+// elem.addEventListener('change', function(){
+//     console.log(this.value)
+// })
+
+// let select = document.querySelector('#select')
+// let btn = document.querySelector('#btn')
+// let p = document.querySelector('p')
+
+// btn.addEventListener('click', function(){
+//     p.textContent = select.value
+// })
+
+
+// let select = document.querySelector('#select')
+// select.addEventListener('change', function(){
+//     let date = new Date(this.value, 2, 0)
+//     if(date.getDate() == 29){
+//         console.log(this.value + '-' + true )
+//     } else{
+//         console.log(this.value + '-' + false)
+//     }
+// })
+
+// let select = document.querySelector('#select')
+
+// let body = document.querySelector('body')
+
+// select.addEventListener('change', function(){
+//     if(this.value == 'red'){
+//         body.style.backgroundColor = 'red'
+//     }
+//     if(this.value == 'blue'){
+//         body.style.backgroundColor = 'blue'
+//     }
+//     if(this.value == 'black'){
+//         body.style.backgroundColor = 'black'
+//     }
+// })
+
+// let select = document.querySelector('#select')
+// select.addEventListener('change', function(){
+//     if(this.value >= 6){
+//         console.log('Это выходной день')
+//     }
+//     else{
+//         console.log('Это рабочий день')
+//     }
+// })
+
+// Изменение выбранного пункта списка на JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Методы focus и blur в JavaScript
 
 
@@ -3433,13 +3683,14 @@
 // 	elem.focus();
 // });
 
-let inp1 = document.querySelector('#inp1')
-let inp2 = document.querySelector('#inp2')
-inp1.addEventListener('click', function(){
-    if(inp1.value.length >= 2){
-        inp2.focus()
-    }
-    if(inp2.value.length >=2){
-        inp2.blur()
-    }     
-})
+// let inp1 = document.querySelector('#inp1')
+// let inp2 = document.querySelector('#inp2')
+// inp1.addEventListener('click', function(){
+//     if(inp1.value.length >= 2){
+//         inp2.focus()
+//     }
+//     if(inp2.value.length >=2){
+//         inp2.blur()
+//     }     
+// })
+
