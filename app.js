@@ -3654,43 +3654,75 @@
 // Изменение выбранного пункта списка на JavaScript
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Методы focus и blur в JavaScript
-
-
-// let elem   = document.querySelector('#elem');
+// let select = document.querySelector('#select');
 // let button = document.querySelector('#button');
 
 // button.addEventListener('click', function() {
-// 	elem.focus();
+// 	select.value = 'one';
 // });
 
-// let inp1 = document.querySelector('#inp1')
-// let inp2 = document.querySelector('#inp2')
-// inp1.addEventListener('click', function(){
-//     if(inp1.value.length >= 2){
-//         inp2.focus()
-//     }
-//     if(inp2.value.length >=2){
-//         inp2.blur()
-//     }     
+// let select = document.querySelector('#select')
+// let date = new Date()
+// console.log(date.getMonth()+1)
+// select.value = date.getMonth()
+
+
+//Номер выбранного пункта выпадающего списка
+
+// let select = document.querySelector('#select');
+// console.log(select.selectedIndex); // выведет 1
+
+// let inp = document.querySelector('#inp')
+// let select = document.querySelector('#select')
+
+// inp.addEventListener('blur', function(){
+//     select.selectedIndex = inp.value
 // })
+
+// let select = document.querySelector('#select')
+// let date = new Date()
+// console.log(date.getDay())
+// select.selectedIndex = date.getDay()-1
+
+
+
+//Получение пунктов выпадающего списка на JavaScript
+
+// console.log(document.querySelectorAll('#select option'));
+
+// let select = document.querySelector('#select')
+
+// for (let option of select){
+//     option.textContent += option.value
+// }
+
+let btn1 = document.querySelector('#btn1')
+let btn2 = document.querySelector('#btn2')
+let btn3 = document.querySelector('#btn3')
+let elem = document.querySelector('body')
+
+btn1.addEventListener('click', function(){
+    elem.style.backgroundColor = 'red'
+})
+
+btn2.addEventListener('click', function(){
+    elem.style.backgroundColor = 'blue'
+})
+
+btn3.addEventListener('click', function(){
+    elem.style.backgroundColor = 'yellow'
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
 
