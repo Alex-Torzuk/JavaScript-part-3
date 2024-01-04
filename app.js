@@ -3693,29 +3693,100 @@
 // let select = document.querySelector('#select')
 
 // for (let option of select){
-//     option.textContent += option.value
+//      option.textContent += ` ` + option.value
 // }
 
-let btn1 = document.querySelector('#btn1')
-let btn2 = document.querySelector('#btn2')
-let btn3 = document.querySelector('#btn3')
-let elem = document.querySelector('body')
 
-btn1.addEventListener('click', function(){
-    elem.style.backgroundColor = 'red'
-})
-
-btn2.addEventListener('click', function(){
-    elem.style.backgroundColor = 'blue'
-})
-
-btn3.addEventListener('click', function(){
-    elem.style.backgroundColor = 'yellow'
-})
+//Работа с пунктами выпадающего списка на JavaScript
 
 
+// let select = document.querySelector('#select');
+// let option = select[0];
+// for (let option of select){
+//     if (option.selected){
+//         option.text += "!"
+//     } else{
+//         option.text += "?"
+//     }
+// }
+
+//Выбор пункта списка
+
+// let select = document.querySelector('#select')
+// let btn = document.querySelector('#btn')
+// let option = select[2];
+
+// btn.addEventListener('click', function(){
+//     for(let option of select){
+//         option.selected = true;
+//     }
+// })
 
 
+// let select = document.querySelector('#select')
+// let button = document.querySelector('#btn')
+
+
+// button.addEventListener('click', function(){
+//     for(let elem of select){
+//         if(elem.selected){
+//             elem.textContent += '!'
+//         }
+//     }
+    
+// })
+
+
+//Поиск ошибок в коде с формами в JavaScript
+
+//№1
+
+
+// let textarea = document.querySelector('textarea')
+// let div = document.querySelector('div')
+// textarea.addEventListener('blur', function(){
+//     div.textContent = textarea.value
+// })
+
+//№2
+
+
+// let inp = document.querySelector('input');
+// console.log(inp)
+// let button = document.querySelector('button');
+// let div = document.querySelector('div');
+
+// button.addEventListener('click', function() {
+// 	if (inp.checked) {
+// 		div.textContent = '111';
+// 	} else {
+// 		div.textContent = '222';
+// 	}
+// });
+
+//№3
+
+// let checkbox = document.querySelector('[type="checkbox"]');
+// let button = document.querySelector('button');
+
+// button.addEventListener('click', function() {
+// 	if (checkbox.checked) {
+// 		console.log('+++');
+// 	} else {
+// 		console.log('---');
+// 	}
+// });
+
+
+//Основы работы с объектом Event в JavaScript
+
+
+let elem = document.querySelector('#elem');
+
+elem.addEventListener('click', function() {
+    console.log(event);
+
+});
 
 
 
