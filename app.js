@@ -3781,12 +3781,16 @@
 //Основы работы с объектом Event в JavaScript
 
 
-let elem = document.querySelector('#elem');
+// let elem = document.querySelector('#elem');
 
-elem.addEventListener('click', function() {
-    console.log(event);
+// elem.addEventListener('click', function(event) {
+//     console.log(event);
 
-});
+// });
+
+
+//Координаты события в JavaScript
+
 
 
 
