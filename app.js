@@ -3791,8 +3791,36 @@
 
 //Координаты события в JavaScript
 
+// let elem = document.getElementById('elem');
+
+// document.addEventListener('mousemove', function(event) {
+// 	elem.innerHTML = event.clientX + ' : ' + event.clientY;
+// });
+
+// let elem = document.querySelector('#el')
+// elem.addEventListener('mousemove', function(event){
+// elem.innerHTML = event.clientX + ' : ' + event.clientY
+// })
 
 
+//Тип события в объекте Event в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', func);
+// elem.addEventListener('dblclick', func);
+
+// function func(event) {
+// 	if(event.type === 'click'){
+//         elem.style.backgroundColor = 'green'
+//     } else if (event.type = 'dblclick'){
+//         elem.style.backgroundColor = 'red'
+//     }
+// }
+
+
+//Элемент события в объекте Event в JavaScript
 
 
 
