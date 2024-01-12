@@ -3822,9 +3822,108 @@
 
 //Элемент события в объекте Event в JavaScript
 
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function(event) {
+// 	console.log(event.target); // выведет наш абзац
+// 	console.log(this);         // выведет наш див
+// });
+
+// let ul = document.querySelector('#elem')
+// ul.addEventListener('click', function(event){
+//    console.log(event.target)
+//    console.log(this)
+//    if(event.target.tagName === 'LI'){
+//     event.target.textContent += '!'
+//    }else if (event.target.tagName === 'UL') {
+//     let newLi = document.createElement('li');
+//     newLi.textContent = 'New text';
+//     elem.appendChild(newLi);
+//   }
+   
+// })
+
+// const buttons = document.querySelectorAll('.btn')
+// console.log(buttons)
+
+// const handleClick = (event)=>{
+//     console.log(event.target)
+//     console.log(event.currentTarget)
+//     event.stopPropagation()
+// }
+// window.addEventListener('click', function(){
+//     console.log('Window click')
+// })
+
+// for(let elem of buttons){
+//     elem.addEventListener('click', handleClick)
+// }
 
 
+//Получение нажатых клавиш в JavaScript
 
+
+// let elem = document.querySelector('input');
+// elem.addEventListener('keydown', function(event) {
+// 	console.log(event.key);
+//     console.log(event.code);
+// });
+
+
+// let input = document.getElementById('myInput');
+// let output = document.getElementById('output');
+
+// input.addEventListener('keydown', function(event) {
+//   let key = event.key;
+//   let code = event.code;
+//   output.textContent = `Вы нажали клавишу "${key}" (код клавиши: ${code})`;
+// });
+
+// let input = document.querySelector('#inp')
+// let p = document.querySelector('p')
+
+// input.addEventListener('keydown', function(event){
+//     if(event.key === 'Enter'){
+//         p.textContent = input.value
+//         input.value = ''
+//     }
+// })
+
+//Отслеживание клавиш-модификаторов в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function(event) {
+// 	if (event.ctrlKey) {
+// 		console.log('нажат Ctrl');
+// 	}
+	
+// 	if (event.altKey) {
+// 		console.log('нажат Alt');
+// 	}
+	
+// 	if (event.shiftKey) {
+// 		console.log('нажат Shift');
+// 	}
+// });
+
+// let elem = document.querySelector('#elem')
+// elem.addEventListener('click', function(event){
+//     if(event.shiftKey){
+//         elem.style.backgroundColor = 'red'
+//     }
+// })
+
+
+let elem = document.querySelectorAll('#elem')
+for(let el of elem){
+   el.addEventListener('click', function(event){
+    if(event.shiftKey){
+        event.target.textContent += '!'
+    }
+   })
+}
 
 
 
