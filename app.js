@@ -3916,15 +3916,191 @@
 // })
 
 
-let elem = document.querySelectorAll('#elem')
-for(let el of elem){
-   el.addEventListener('click', function(event){
-    if(event.shiftKey){
-        event.target.textContent += '!'
-    }
-   })
-}
+// let elem = document.querySelectorAll('#elem')
+// for(let el of elem){
+//    el.addEventListener('click', function(event){
+//     if(event.shiftKey){
+//         event.target.textContent += '!'
+//     }
+//    })
+// }
+
+
+//Отмена действия по умолчанию в JavaScript
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function(event) {
+// 	event.preventDefault();
+// 	console.log('Вы не можете перейти по этой ссылке!');
+// });
+
+// const elem = document.querySelector('#elem')
+
+// elem.addEventListener('click', function(event){
+//     let attrbut = elem.getAttribute('href')
+//     elem.textContent += attrbut
+//     event.preventDefault()
+// })
+
+// const inp1 = document.querySelector('#inp1')
+// const inp2 = document.querySelector('#inp2')
+// const p = document.querySelector('p')
+// const a = document.querySelector('a')
+
+// a.addEventListener('click', function(event){
+//     p.textContent = +inp1.value + +inp2.value
+//     event.preventDefault()
+// })
+
+
+//Всплытие событий в JavaScript
+
+// let red = document.querySelector('.red')
+// let green = document.querySelector('.green')
+// let blue = document.querySelector('.blue')
+
+// red.addEventListener('click', function(){
+//     console.log('red')
+// })
+// green.addEventListener('click', function(){
+//     console.log('green')
+// })
+// blue.addEventListener('click', function(){
+//     console.log('blue')
+// })
+
+
+//Получение целевого элемента при всплытии событий
+
+
+// let div = document.querySelector('div');
+
+// div.addEventListener('click', function(event) {
+// 	if (event.target.matches('div')) {
+// 		console.log('клик именно по диву');
+// 	}
+// 	if (event.target.matches('p')) {
+// 		console.log('клик именно по абзацу');
+// 	}
+// });
 
 
 
+// let elems = document.querySelector('div')
+// elems.addEventListener('click', function(event){
+//     if(event.target.matches('div')){
+//         console.log('клик именно по диву');
+//     }
+//     if(event.target.matches('ul')){
+//         console.log('клик именно по ul');
+//         let newLi = document.createElement('li');
+//         newLi.textContent = 'New text';
+//         elems.appendChild(newLi);
+//     }
+//     if(event.target.matches('li')){
+//         console.log('клик именно по li');
+//         event.target.textContent += '!'
+//     }
+// })
 
+
+//Прекращение всплытия событий в JavaScript
+
+
+
+// let parent = document.querySelector('#parent');
+// let button = document.querySelector('button');
+// let block  = document.querySelector('#block');
+
+// button.addEventListener('click', function(event) {
+// 	block.classList.add('active');
+//     event.stopPropagation(); // остановим всплытие
+
+//     //event.stopImmediatePropagation(); // Немедленное прекращение 
+// });
+
+// parent.addEventListener('click', function() {
+// 	block.classList.remove('active');
+// });
+
+//Погружение событий в JavaScript
+
+// let red = document.querySelector('.red')
+// let green = document.querySelector('.green')
+// let blue = document.querySelector('.blue')
+
+// red.addEventListener('click', function() {
+// 	console.log('зеленый - погружение');
+// }, true);
+// red.addEventListener('click', function() {
+// 	console.log('зеленый - всплытие');
+// }, false);
+
+// green.addEventListener('click', function() {
+// 	console.log('голубой - погружение');
+// }, true);
+// green.addEventListener('click', function() {
+// 	console.log('голубой - всплытие');
+// }, false);
+
+// blue.addEventListener('click', function() {
+// 	console.log('красный - погружение');
+// }, true);
+// blue.addEventListener('click', function() {
+// 	console.log('красный- всплытие');
+// }, false);
+
+
+//Навешивание обработчиков на новые элементы в JavaScript
+
+
+// let button = document.querySelector('button');
+let list   = document.querySelector('ul');
+// let items  = list.querySelectorAll('li');
+// console.log(items)
+
+// for (let item of items) {
+// 	item.addEventListener('click', function() {
+// 		this.textContent = this.textContent += '!';
+// 	});
+// }
+
+// list.addEventListener('click', function(event) {
+// 	console.log(this);         // наш список
+// 	console.log(event.target); // пункт списка
+// });
+
+
+// list.addEventListener('click', function(event) {
+// 	event.target.innerHTML = event.target.innerHTML + '!';
+// });
+// button.addEventListener('click', function(event) {
+// 	let item = document.createElement('li');
+// 	item.innerHTML = 'item';
+    
+//     // item.addEventListener('click', function() { // обработчик клика
+// 	// 	this.innerHTML = this.innerHTML + '!';
+// 	// });
+//     // item.addEventListener('click', handler);
+// 	list.appendChild(item);
+// });
+
+// function handler() {
+// 	this.innerHTML = this.innerHTML + '!';
+// }
+
+// for (let item of items) {
+// 	item.addEventListener('click', handler);
+// }
+
+
+//Универсальное делегирование событий
+
+
+// list.addEventListener('click', function(event) {
+// 	let li = event.target.closest('li');
+	
+// 	if (li) {
+// 		li.innerHTML = li.innerHTML + '!';
+// 	}
+// });
