@@ -4104,3 +4104,605 @@ let list   = document.querySelector('ul');
 // 		li.innerHTML = li.innerHTML + '!';
 // 	}
 // });
+
+
+
+//Основы работы с контекстом в JavaScript
+
+
+// let elem = document.querySelector('#elem')
+// let elem2 = document.querySelector('#elem2')
+
+// elem.addEventListener('blur', func)
+// elem2.addEventListener('blur', func)
+
+// function func (){
+//     console.log(this.value)
+// }
+
+//Контекст непривязанной функции в JavaScript
+
+
+// function func (){
+// console.log(this)
+// }
+// func()
+
+
+//Потеря контекста в JavaScript
+
+// "use strict";
+
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', parent);
+
+// function parent() {
+// 	console.log(this.value); // что выведет?
+	
+// 	function child() {
+// 		console.log(this.value); // что выведет?
+// 	}
+// 	child();
+// }
+
+
+//Решение проблемы с контекстом в JavaScript
+
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', func);
+
+// function func() {
+//     let self = this
+// 	alert( square() );
+	
+// 	function square() {
+// 		return self.value * self.value
+// 	}
+// }
+
+
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', parent);
+
+// function parent() {
+//     child(this)
+	
+// 	function child(param) {
+// 		return alert(param.value * param.value)
+// 	}
+// }
+
+
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', parent);
+
+// function parent() {
+//     this.value
+	
+// 	 let child = () => {
+// 		return alert(this.value * this.value)
+// 	}
+//     child()
+// }
+
+
+
+// Привязывание контекста через метод call в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+// function func() {
+// 	console.log(this.value); // выведет value инпута
+// }
+// func.call(elem);
+
+// let elem1 = document.querySelector('#elem1')
+// let elem2 = document.querySelector('#elem2')
+// let elem3 = document.querySelector('#elem3')
+
+// function func() {
+// 	console.log(this.value);
+// }
+
+// func.call(elem1)
+// func.call(elem2)
+// func.call(elem3)
+
+
+// let elem = document.querySelector('#elem');
+
+// function func(surname, name) {
+// 	console.log(this.value + ', ' + name + ' ' + surname);
+// }
+
+// func.call(elem, 'Smit', 'John'); // тут должно вывести 'hello, John Smit'
+
+
+//Привязывание контекста через метод apply в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+
+// function func(surname, name) {
+// 	console.log(this.value + ', ' + surname + ' ' + name);
+// }
+
+// func.apply(elem, ['Smit', 'John']); // тут должно вывести 'hello, John Smit'
+
+
+
+//Привязывание контекста через метод bind в JavaScript
+
+
+
+// let elem = document.querySelector('#elem');
+// function func(param1, param2) {
+// 	console.log(this.value + param1 + param2);
+// }
+// let newFunc = func.bind(elem)
+// newFunc('1', '2')
+
+
+
+// let elem = document.getElementById('elem');
+
+// function func(name, surname) {
+// 	console.log(this.value + ', ' + name + ' ' + surname);
+// }
+
+// // тут напишите конструкцию с bind()
+
+// func = func.bind(elem)
+// func('John', 'Smit'); // тут должно вывести 'hello, John Smit'
+// func('Eric', 'Luis'); // тут должно вывести 'hello, Eric Luis'
+
+
+
+//Таймеры
+
+
+
+// let elem = document.querySelector('div')
+// let btn = document.querySelector('#btn')
+
+// btn.addEventListener('click', function(){
+//     setInterval(function() {
+//         elem.style.backgroundColor = 'green'
+//     }, 2000);
+    
+// })
+
+
+//Счетчик через функцию setInterval в JavaScript
+
+
+// let i = 0;
+// setInterval(function() {
+// console.log(++i);
+//    
+	
+// }, 1000);
+
+
+// let i = 10;
+
+// setInterval(function(){
+//     console.log(--i)
+// }, 1000);
+
+
+//Остановка таймера JavaScript
+
+
+// let i = 0;
+
+// let timerId = setInterval(function() {
+// 	console.log(++i);
+	
+// 	if (i >= 5) {
+// 		clearInterval(timerId);
+// 	}
+// }, 1000);
+
+
+// let i = 10;
+
+// let timerId = setInterval(function(){
+//     console.log(i--)
+//     if (i === 0){
+//         clearInterval(timerId)
+//     }
+// }, 1000);
+
+
+//Кнопка для запуска таймера на JavaScript
+
+
+// let start = document.querySelector('#start');
+
+// start.addEventListener('click', function() {
+// 	let i = 0;
+	
+// 	setInterval(function() {
+// 		console.log(++i);
+// 	}, 1000);
+// });
+
+// let btn = document.querySelector('#start')
+// let i = 100
+
+// btn.addEventListener('click', function func(){
+    
+//     let timerId = setInterval(function(){
+//         console.log(i--)
+//         if(i <= 95){
+//             clearInterval(timerId)
+//         }
+//     }, 1000)
+//     this.removeEventListener('click', func)
+    
+// })
+
+
+//Кнопки для запуска и остановки таймера на JavaScript
+
+
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+// let timerId
+
+// start.addEventListener('click', function() {
+// 	let i = 0;
+	
+// 	timerId = setInterval(function() {
+// 		console.log('!')
+// 	}, 1000);
+// });
+
+// // Останавливаем таймер:
+// stop.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+
+
+// let start = document.querySelector('#start')
+// let stop = document.querySelector('#stop')
+// let i = 100;
+// let timerId
+// start.addEventListener('click', function (){
+
+    
+//     timerId = setInterval(function(){
+//         console.log(i--)
+//         if (i === 90){
+//             clearInterval(timerId)
+//         }
+//     }, 1000)
+//     stop.addEventListener('click', function(){
+//         clearInterval(timerId)
+//     })
+// })
+
+
+
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+// let timerId
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds());
+// 	}, 1000);
+// });
+
+// stop.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+
+// let timerId;
+
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds());
+// 	}, 1000);
+// });
+
+// stop.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+
+// let timerId;
+
+// start.addEventListener('click', function() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds());
+// 	}, 1000);
+// });
+
+// stop.addEventListener('click', function() {
+// 	clearInterval(timerId);
+// });
+
+// let start = document.querySelector('#start');
+// let stop  = document.querySelector('#stop');
+
+// let timerId;
+
+// start.addEventListener('click', function func() {
+// 	timerId = setInterval(function() {
+// 		let date = new Date;
+// 		console.log(date.getMinutes() + ' ' + date.getSeconds());
+// 	}, 1000);
+//     this.removeEventListener('click', func)
+// });
+
+// stop.addEventListener('click', function func2() {
+// 	clearInterval(timerId);
+//     start.addEventListener('click', func2)
+// });
+
+
+//Практика на таймеры и работу с DOM в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+
+// let timerId = setInterval(function() {
+// 	elem.value = Number(elem.value) +1;
+//     if(elem.value >= 5){
+//         clearInterval(timerId)
+//     }
+// }, 1000);
+
+// let elem = document.querySelector('#elem')
+
+// let timerId = setInterval(function(){
+//     elem.value = Number(elem.value - 1)
+//     if(elem.value == 0){
+//         clearInterval(timerId)
+//     } 
+
+// }, 1000);
+
+// let elem = document.querySelector('p')
+// let timerId = setInterval(function(){
+//     elem.textContent = Number(elem.textContent) +1
+//     if(elem.textContent == 5){
+//         clearInterval(timerId)
+//     }
+// }, 1000)
+
+//  Таймеры и потеря контекста в JavaScript
+
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+//     let a = this
+// 	setInterval(function() {
+// 		console.log(a.value); // будет выводится undefined
+// 	}, 1000);
+// });
+// elem.addEventListener('click', function() {
+// 	setInterval(function() {
+// 		console.log('!!!'); // что-нибудь выводим в консоль
+// 	}, 1000);
+// });
+
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+//     let safe = this
+    
+// 	setInterval(function() {
+//         safe.value = Number(safe.value) +1
+		
+// 	}, 1000);
+// });
+// elem.addEventListener('click', function(){
+//     setInterval(() => this.value = Number(this.value)+1, 1000 )
+// })
+
+
+//Передача контекста параметром функции setInterval
+
+// let elem = document.querySelector('#elem');
+
+// const handleInterval = () => {
+//     let newEl = this
+// 	const initialInterval = setInterval(function() {
+// 		newEl.value = Number(newEl.value) -1
+// 	}, 1000);
+// }
+
+// elem.addEventListener('click', handleInterval)
+
+// elem.removeEventListener("click", function() {
+//     clearInterval(initialInterval)
+// })
+
+
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+//     let safe = this
+//     let el 
+// 	el = setInterval(function() {
+// 		safe.value = Number(safe.value) -1
+//         if(safe.value == 5)[
+//             clearInterval(el)
+//         ]
+// 	}, 1000);
+// });
+
+// elem.addEventListener('click', function() {
+//     let timerId
+// 	timerId = setInterval(function(safe) {
+// 		safe.value = Number(safe.value) -1
+//         if(safe.value == 0){
+//             clearInterval(timerId)
+//         }
+// 	}, 1000, this)
+// });
+
+// Практика на таймеры и работу с DOM в JavaScript
+
+//1
+// let btn = document.querySelector('#btn')
+// let p = document.querySelector('p')
+// btn.addEventListener('click', function(){
+//     setInterval(function(){
+//         p.textContent = Number(p.textContent) +1
+//     }, 1000)
+// })
+
+//2
+//========= Идет замыкание на кнопки
+// let btn = document.querySelector('#btn')
+// let p = document.querySelector('p')
+// btn.addEventListener('click', function(){
+//     let timerId
+//     timerId = setInterval(function(safe){
+//         safe.textContent = Number(safe.textContent-1)
+//             if(safe.textContent == 0){
+//                 clearInterval(timerId)
+//         }
+//     }, 1000, this)
+
+// });
+//=========
+
+// let btn = document.querySelector('#btn')
+// let p = document.querySelector('p')
+// btn.addEventListener('click', function(){
+//     let timerId
+//     timerId = setInterval(function(){
+//         p.textContent = Number(p.textContent)-1
+//         if(p.textContent == 0){
+//             clearInterval(timerId)
+//         }
+//     }, 1000)
+// })
+
+//№3
+
+// let input = document.querySelector('#input')
+// setInterval(function(){
+//     input.value = input.value * input.value
+// }, 1000)
+
+//4
+
+// let input = document.querySelector('#input')
+// let p = document.querySelector('p')
+// input.addEventListener('blur', function(){
+//     let timerId
+//     //let newP = p
+//     timerId = setInterval(function(){
+//        p.textContent = --input.value
+//        if(input.value == 0){
+//         clearInterval(timerId)
+//        }
+//     }, 1000)
+// })
+
+//5
+
+// let input = document.querySelector('#input')
+// let btn = document.querySelector('#btn')
+// let p = document.querySelector('p')
+// btn.addEventListener('click', function(){
+//     p.textContent = input.value
+//     let timerId 
+//     timerId = setInterval(function(){
+//         p.textContent--
+//         if(p.textContent == 0){
+//             clearInterval(timerId)
+//         }
+//     }, 1000)
+// })
+
+
+//6
+
+// let start = document.querySelector('#start')
+// let stop = document.querySelector('#stop')
+// let p = document.querySelector('p')
+
+// start.addEventListener('click', function func(){
+//     let safe = this
+//     let timerId
+//     timerId = setInterval(function(){
+//         p.textContent = Number(p.textContent) +1
+        
+//     }, 1000)
+//     stop.addEventListener('click', function(){
+//         clearInterval(timerId)
+//     })
+// })
+
+//7
+
+// let p = document.querySelector('p')
+// let isRed = true
+// setInterval(function(){
+//     if(isRed){
+//         p.style.color = 'green'
+//     } else{
+//         p.style.color = 'red'
+//     }
+//     isRed = !isRed
+//     // p.style.color = 'red'
+//     // p.style.color = 'green'
+//     // if(p.style.color == 'red'){
+//     //     p.style.color = 'green'
+//     // }
+// }, 1000)
+
+//8
+
+// function updateClock() {
+//     const now = new Date();
+//     const hours = now.getHours().toString().padStart(2, '0');
+//     const minutes = now.getMinutes().toString().padStart(2, '0');
+//     const seconds = now.getSeconds().toString().padStart(2, '0');
+//     const timeString = `${hours}:${minutes}:${seconds}`;
+//     document.getElementById('time').textContent = timeString;
+//   }
+
+//   // Update the clock immediately and then every second
+//   updateClock();
+//   setInterval(updateClock, 1000);
+
+  
+//Задержка перед выполнением в JavaScript
+
+
+//   let elem = document.querySelector('#elem');
+//   elem.addEventListener('click', function() {
+// 	setTimeout(function() {
+// 		alert('Hi, Alex !!');
+// 	}, 3000);
+// });
+
+
+// let text = document.querySelector('p')
+// setTimeout(function(){
+// text.textContent = 'Hello Alex, this is Lux'
+// }, 5000)
+
+
+//Создание и вставка элементов на JavaScript
+
