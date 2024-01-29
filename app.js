@@ -4706,3 +4706,54 @@ let list   = document.querySelector('ul');
 
 //Создание и вставка элементов на JavaScript
 
+// let parent = document.querySelector('#parent');
+
+// let p = document.createElement('p');
+// p.textContent = '4';
+
+// parent.appendChild(p);
+
+
+// let ol = document.querySelector('#elem')
+// let li = document.createElement('li')
+// li.textContent = 'item'
+// ol.appendChild(li)
+
+// let ol = document.querySelector('#elem')
+// let btn = document.querySelector('#button')
+// btn.addEventListener('click', function(){
+    
+//     let li = document.createElement('li')
+//     li.textContent = 'item'
+//         ol.appendChild(li)    
+// })
+
+
+//Привязывание событий при вставке элементов
+
+
+// let parent = document.querySelector('#parent');
+
+// let p = document.createElement('p');
+// p.textContent = '!';
+
+// p.addEventListener('click', function() {
+// 	console.log(this.textContent); // по клику выведем текст абзаца
+// });
+
+// parent.appendChild(p);
+
+
+// let ol = document.querySelector('#elem')
+// let btn = document.querySelector('#button')
+
+// btn.addEventListener('click', function(){
+//     let li = document.createElement('li')
+//     ol.appendChild(li)
+//     li.addEventListener('click', function(){
+//         this.textContent = '!'
+//     })
+// })
+
+
+//Создание элементов в цикле на JavaScript
