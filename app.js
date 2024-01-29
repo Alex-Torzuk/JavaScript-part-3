@@ -4744,16 +4744,16 @@ let list   = document.querySelector('ul');
 // parent.appendChild(p);
 
 
-// let ol = document.querySelector('#elem')
-// let btn = document.querySelector('#button')
+let ol = document.querySelector('#elem')
+let btn = document.querySelector('#button')
 
-// btn.addEventListener('click', function(){
-//     let li = document.createElement('li')
-//     ol.appendChild(li)
-//     li.addEventListener('click', function(){
-//         this.textContent = '!'
-//     })
-// })
+btn.addEventListener('click', function(){
+    let li = document.createElement('li')
+    ol.appendChild(li)
+    li.addEventListener('click', function(){
+        this.textContent = '!'
+    })
+})
 
 
 //Создание элементов в цикле на JavaScript
