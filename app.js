@@ -4744,16 +4744,86 @@ let list   = document.querySelector('ul');
 // parent.appendChild(p);
 
 
-let ol = document.querySelector('#elem')
-let btn = document.querySelector('#button')
+// let ol = document.querySelector('#elem')
+// let btn = document.querySelector('#button')
 
-btn.addEventListener('click', function(){
-    let li = document.createElement('li')
-    ol.appendChild(li)
-    li.addEventListener('click', function(){
-        this.textContent = '!'
-    })
-})
+// btn.addEventListener('click', function(){
+//     let li = document.createElement('li')
+//     ol.appendChild(li)
+//     li.addEventListener('click', function(){
+//         this.textContent = '!'
+//     })
+// })
 
 
 //Создание элементов в цикле на JavaScript
+
+// let parent = document.querySelector('#parent')
+// for(let i = 1; i <= 9; i++){
+//     let p  = document.createElement('p')
+//     p.textContent = 'Hello world'
+//     parent.appendChild(p)
+// }
+
+
+
+// let ul = document.querySelector('#ul')
+// for(let i = 1; i <= 10; i++){
+//     let li = document.createElement('li')
+//     li.textContent = i
+
+//     ul.appendChild(li)
+// }
+
+
+//Навешивание обработчиков в цикле на JavaScript
+
+
+// let parent = document.querySelector('#parent');
+
+// for (let i = 1; i <= 9; i++) {
+// 	let p = document.createElement('p');
+// 	p.textContent = '!';
+	
+// 	// Навешиваем обработчик клика:
+// 	p.addEventListener('click', function() {
+// 		console.log(this.textContent);
+// 	});
+	
+// 	parent.appendChild(p);
+// }
+
+// let parent = document.querySelector('#parent')
+// let p = document.querySelector('p') 
+//  for(let i = 1; i <= 5; i++){
+//     let input = document.createElement('input')
+//     input.value = 'Hello, Alex'
+//     parent.appendChild(input)
+//     input.addEventListener('blur', function(){
+//         p.textContent = input.value
+//     })
+
+//  }
+
+// Удаление элементов на JavaScript
+
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function() {
+// 		elem.remove();
+// 	});
+// }
+
+let ul = document.querySelectorAll('ul li')
+console.log(ul)
+for(let el of ul){
+    el.addEventListener('click', function(){
+        el.remove()
+    })
+}
+
+
+for (let i = 1; i > 0; i++){
+    console.log(i)
+}
