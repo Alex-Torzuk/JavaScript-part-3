@@ -4815,13 +4815,624 @@ let list   = document.querySelector('ul');
 // 	});
 // }
 
-let ul = document.querySelectorAll('ul li')
-console.log(ul)
-for(let el of ul){
-    el.addEventListener('click', function(){
-        el.remove()
-    })
-}
+// let ul = document.querySelectorAll('ul li')
+// console.log(ul)
+// for(let el of ul){
+//     el.addEventListener('click', function(){
+//         el.remove()
+//     })
+// }
 
 
+
+// let parent = document.querySelectorAll('#parent  li')
+// console.log(parent)
+// let btn = document.querySelector('#button')
+// btn.addEventListener('click', function(){
+//     for(let child of parent){
+//         child.remove()
+//     }
+    
+// })
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     var button = document.getElementById('button');
+//     button.addEventListener('click', function() {
+//       var parent = document.getElementById('parent');
+//       var children = parent.getElementsByTagName('li');
+//       if (children.length > 0) {
+//         for (var child of children) {
+//           if (child === parent.lastElementChild) {
+//             parent.removeChild(child);
+//             break;
+//           }
+//         }
+//       }
+//     });
+//   });
+
+
+
+//Вставка элементов в начало или в конец на JavaScript
+
+
+// let ul = document.querySelector('#elem')
+// console.log(ul)
+// let newLiTop = document.createElement('li')
+// newLiTop.textContent = 'start';
+// let newliBut = document.createElement('li')
+// newliBut.textContent = 'finish'
+
+
+//     ul.prepend(newLiTop)
+//     ul.append(newliBut)
+
+
+// let parent = document.getElementById('parent')
+// let elem = document.getElementById('elem')
+// let newText = document.createElement('li')
+// newText.textContent = 'new'
+
+// parent.insertBefore(newText, elem)
+// newText.addEventListener('click', function(){
+//     newText.textContent += '!' 
+    
+// })
+
+
+//Смежная вставка элементов на JavaScript
+
+//Пример . Способ beforeBegin
+// let p = document.createElement('p')
+// p.textContent = "!!!"
+
+// let elem  = document.querySelector('#elem')
+// elem.insertAdjacentElement('beforeBegin', p)
+
+
+//Пример . Способ afterEnd
+// let p = document.createElement('p')
+// p.textContent = "!!!"
+
+// let elem  = document.querySelector('#elem')
+// elem.insertAdjacentElement('afterEnd', p)
+
+
+//Пример . Способ afterBegin
+// let p = document.createElement('p')
+// p.textContent = "!!!"
+
+// let elem  = document.querySelector('#elem')
+// elem.insertAdjacentElement('afterBegin', p)
+
+
+//Пример . Способ beforeEnd
+// let p = document.createElement('p')
+// p.textContent = "!!!"
+
+// let elem  = document.querySelector('#elem')
+// elem.insertAdjacentElement('beforeEnd', p)
+
+
+
+//Смежная вставка тегов
+//Метод insertAdjacentHTML
+
+
+// let elem = document.querySelector('#elem')
+
+// elem.insertAdjacentHTML('afterBegin', '<div class="www"><p>text</p><p>text</p><input></div>')
+
+
+
+//Клонирование элементов на JavaScript
+// let parent = document.querySelector('#parent');
+// let elem = parent.querySelector('.elem');
+
+// let clone = elem.cloneNode(true);
+// parent.appendChild(clone);
+
+
+// let input = document.querySelector('#input')
+// let btn = document.querySelector('#btn')
+
+// btn.addEventListener('click', () => {
+//     let clone = input.cloneNode(true)
+//     document.body.prepend(clone);
+// })
+
+
+//Проверка элементов в JavaScript
+
+//Метод matches
+
+// let elem = document.querySelector('#elem');
+// console.log(elem.matches('p.www'));
+
+
+// let elem = document.querySelector('#elem')
+// document.write(elem.matches('.www'))
+// document.write(elem.matches('p'))
+
+
+//Метод contains
+
+// let parent = document.querySelector('#parent');
+// let child = document.querySelector('#child');
+
+// let contains = parent.contains(child);
+// console.log(contains);
+
+// let div = document.querySelector('#elem1')
+// let p = document.querySelector('#elem2')
+
+// let contains = div.contains(p)
+// console.log(contains)
+
+
+
+
+//Практика
+
+//Создание элементов из массива на JavaScript
+
+// let parent = document.querySelector('#parent');
+// let arr = [1, 2, 3, 4, 5];
+// for (let elem of arr) {
+// 	let p = document.createElement('p');
+// 	p.textContent = elem;
+//     p.addEventListener('click', function(){
+//         p.textContent = Number(p.textContent) + 1
+//     })
+	
+// 	parent.appendChild(p);
+// }
+
+
+//Практика на создание списков ul на JavaScript
+
+// let arr = [1, 2, 3, 4, 5]
+// let ul = document.querySelector('#elem')
+// for(let elem of arr){
+//     let li = document.createElement('li')
+//     li.textContent = elem
+//     li.addEventListener('click', function fun(){
+        
+//         console.log(li.textContent)
+//         li.textContent += '!'
+//        this.removeEventListener('click', fun)
+//     })
+// ul.appendChild(li)
+// }
+
+
+//Создание HTML таблиц на JavaScript
+
+// let table = document.querySelector('#table');
+
+// for (let i = 0; i < 10; i++) {
+// 	let tr = document.createElement('tr');
+    
+	
+// 	for (let i = 0; i < 5; i++) {
+// 		let td = document.createElement('td');
+//         td.textContent = 'x'
+// 		tr.appendChild(td);
+
+// 	}
+	
+// 	table.appendChild(tr);
+// }
+
+// let table = document.querySelector('#table')
+
+// for(let i = 0; i < 10; i ++){
+//     let tr = document.createElement('tr')
+//     for(let i = 0; i <20; i++){
+//         let td = document.createElement('td')
+//         tr.appendChild(td)
+//     }
+//     table.appendChild(tr)
+// }
+
+
+
+//Создание HTML таблицы из массива на JavaScript
+
+
+// let arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]];
+// let table = document.querySelector('#table');
+
+// for (let subArr of arr) {
+//     console.log(subArr)
+// 	let tr = document.createElement('tr');
+	
+// 	for (let elem of subArr) {
+// 		let td = document.createElement('td');
+// 		td.textContent = elem;
+// 		tr.appendChild(td);
+// 	}
+	
+// 	table.appendChild(tr);
+// }
+
+
+// let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+// let table = document.querySelector('#table')
+
+// for(let subArr of arr){
+//     let tr = document.createElement('tr')
+//     for(let elem of subArr){
+//         let td = document.createElement('td')
+//         td.textContent = elem * elem
+//         tr.appendChild(td)
+//     }
+//     table.appendChild(tr)
+// }
+
+
+
+//Создание HTML таблицы из массива объектов
+// let users = [
+// 	{
+// 		name: 'name1',
+// 		surname: 'surname1',
+// 		patronymic: 'patronymic1'
+// 	},
+// 	{
+// 		name: 'name2',
+// 		surname: 'surname2',
+// 		patronymic: 'patronymic2'
+// 	},
+// 	{
+// 		name: 'name3',
+// 		surname: 'surname3',
+// 		patronymic: 'patronymic3'
+// 	},
+// ];
+
+// let table = document.getElementById('table');
+
+// for (let user of users) {
+//     console.log(user)
+// 	let tr = document.createElement('tr');
+	
+// 	let td1 = document.createElement('td');
+// 	td1.textContent = user.name;
+// 	tr.appendChild(td1);
+	
+// 	let td2 = document.createElement('td');
+// 	td2.textContent = user.surname;
+// 	tr.appendChild(td2);
+	
+// 	let td3 = document.createElement('td');
+// 	td3.textContent = user.patronymic;
+// 	tr.appendChild(td3);
+	
+// 	table.appendChild(tr);
+// }
+
+// let employees = [
+// 	{name: 'employee1', age: 30, salary: 400},
+// 	{name: 'employee2', age: 31, salary: 500},
+// 	{name: 'employee3', age: 32, salary: 600},
+// ];
+
+// let table = document.querySelector('#table')
+// for(let employee of employees){
+//     console.log(employee)
+//     let tr = document.createElement('tr')
+//     let td1 = document.createElement('td')
+//     td1.textContent = employee.name
+//     tr.appendChild(td1)
+//     let td2 = document.createElement('td')
+//     td2.textContent = employee.age
+//     tr.appendChild(td2)
+//     td2.addEventListener('click', function(){
+//         td2.textContent = Number(td2.textContent) + 1
+//     })
+//     let td3 = document.createElement('td')
+//     td3.textContent = employee.salary
+//     tr.appendChild(td3)
+//     td3.addEventListener('click', function(){
+//         td3.textContent = Number(td3.textContent) * 10
+//     })
+//     table.appendChild(tr)
+// }
+
+
+
+//Добавление рядов и колонок в HTML таблицу
+// let table = document.querySelector('#table');
+// let btn = document.getElementById('btn')
+// console.log(btn)
+
+// btn.addEventListener('click', function(){
+//     // let tr = document.createElement('tr');
+//     // for (let i = 1; i <= 2; i++) {
+//     //     let td = document.createElement('td');
+//     //     tr.appendChild(td);
+//     // }
+//     //  table.appendChild(tr)
+//     let trs = document.getElementsByTagName('tr');
+
+// for (let tr of trs) {
+// 	let td = document.createElement('td');
+// 	tr.appendChild(td);
+// }
+
+// })
+
+
+//Изменение ячеек HTML таблицы на JavaScript
+
+// let table = document.getElementById('table')
+// let btn = document.getElementById('btn')
+
+// btn.addEventListener('click', function(){
+//     let trs = document.getElementsByTagName('td')
+//     for(let td of trs){
+//         td.textContent = td.textContent *2
+//     }
+// })
+
+//Самоудаление новых элементов на JavaScript
+
+// let div = document.getElementById('parent')
+
+// for(let i = 0; i < 9; i++){
+//     let p = document.createElement('p')
+//     p.textContent = i
+//     p.addEventListener('click', function(){
+//         this.remove()
+//     })
+//     div.appendChild(p)
+
+// }
+
+
+
+// let ul = document.getElementById('parent')
+// let btn = document.getElementById('button')
+// let li = document.getElementsByTagName('li')
+// console.log(li)
+// let proThis
+
+// btn.addEventListener('click', function(){
+//     let newLi = document.createElement('li')
+//     newLi.textContent = 'New text'
+    
+//     for(let elem of li){
+//         elem.addEventListener('click', function(){
+//             proThis = this
+//             proThis.remove()
+//         })
+//     }
+    
+
+//     newLi.addEventListener('click', function(){
+//         proThis = this
+//         proThis.remove()
+//     })
+
+//     ul.appendChild(newLi)
+// })
+
+
+//Ссылка на удаление элемента на JavaScript
+
+
+// let elem   = document.querySelector('#elem');
+// let remove = document.querySelector('#remove');
+
+// remove.addEventListener('click', function() {
+// 	elem.remove();
+//     console.log(event)
+//     event.preventDefault()
+// });
+
+
+//Создание ссылок для удаление элементов на JavaScript
+
+
+// let elems = document.querySelectorAll('#parent p');
+
+// for (let elem of elems) {
+// 	let remove = document.createElement('a');
+// 	remove.href = '';
+// 	remove.textContent = 'remove';
+// 	elem.appendChild(remove);
+	
+// 	remove.addEventListener('click', function(event) {
+// 		elem.remove();
+// 		event.preventDefault();
+// 	});
+// }
+
+
+// let ul = document.getElementById('ul')
+// for( let i = 1; i < 4; i++){
+//     let li = document.createElement('li')
+//     li.textContent = 'new text'
+//     ul.appendChild(li)
+//     let remove = document.createElement('a')
+//     remove.href = '';
+//     remove.textContent = 'remove'
+//     li.appendChild(remove)
+//     remove.addEventListener('click', function(event){
+//         li.remove()
+//         event.preventDefault()
+//     })
+// }
+
+
+// let table = document.getElementById('table')
+// for(let i = 1; i < 4; i++){
+//     let tr = document.createElement('tr')
+//     table.appendChild(tr)
+//     for(let i = 1; i < 4; i++){
+//         let td = document.createElement('td')
+//         tr.appendChild(td)
+//     }
+// }
+
+
+
+//Редактирование отдельного элемента на JavaScript
+
+
+// let p = document.getElementById('elem')
+// let input = document.getElementById('input')
+// input.value = p.textContent
+// input.addEventListener('input', function(){
+//     p.textContent = this.value
+// })
+
+
+// let parent = document.getElementById('parent')
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+	
+// 	input.addEventListener('blur', function() {
+// 		elem.textContent = this.value;
+// 		// this.remove(); // удалим инпут
+// 	});
+	
+// 	parent.appendChild(input);
+// });
+
+
+//Прячем текст при редактировании элемента на JavaScript
+// let elem = document.querySelector('#elem');
+
+// elem.addEventListener('click', function fun() {
+// 	let input = document.createElement('input');
+// 	input.value = elem.textContent;
+// 	elem.textContent = ''
+// 	elem.appendChild(input);
+//     elem.removeEventListener('click', fun)
+//     input.addEventListener('blur', function(){
+//         elem.textContent = input.value
+//         elem.addEventListener('click', fun)
+//     })
+// });
+
+
+
+//Редактирование в группе элементов на JavaScript
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		let input = document.createElement('input');
+// 		input.value = elem.textContent;
+		
+// 		elem.textContent = '';
+// 		elem.appendChild(input);
+		
+// 		input.addEventListener('blur', function() {
+// 			elem.textContent = this.value;
+// 			elem.addEventListener('click', func);
+// 		});
+		
+// 		elem.removeEventListener('click', func);
+// 	});
+// }
+
+// let ul = document.querySelectorAll('ul li')
+// console.log(ul)
+// for(let elem of ul){
+//     elem.addEventListener('click', function fun(){
+//         let input = document.createElement('input')
+//         input.value = elem.textContent
+//         elem.textContent = ''
+//         elem.appendChild(input)
+//         elem.removeEventListener('click', fun)
+//         input.addEventListener('blur', function(){
+//             elem.textContent = input.value
+//             elem.addEventListener('click', fun)
+//         })
+//     })
+// }
+
+
+//Одновременное редактирование и удаление элементов
+
+// let parents = document.querySelectorAll('#parent p span')
+// console.log(parents)
+
+// for(let elem of parents){
+//     elem.addEventListener('click', function fun(){
+//         let input = document.createElement('input')
+//         input.value = elem.textContent
+//         elem.textContent = ''
+//         elem.appendChild(input)
+//         elem.removeEventListener('click', fun)
+//         input.addEventListener('blur', function(){
+//             elem.textContent = input.value
+//             elem.addEventListener('click', fun)
+//         })
+//     })
+// }
+
+// let div = document.getElementById('parent')
+// let parent = document.querySelectorAll('#parent p')
+// console.log(div)
+
+// for(let elem of parent){
+    
+//     let span = document.createElement('span')
+//     span.textContent = elem.textContent
+    
+//     elem.textContent = ''
+//     elem.appendChild(span)
+//     console.log(span.textContent)
+//     let remove = document.createElement('a')
+//     remove.href = '#'
+//     remove.textContent = 'remove'
+//     span.appendChild(remove)
+//     remove.addEventListener('click', function(){
+//         span.textContent = ''
+//     })
+    
+// }
+
+
+//Стилизация элементов на JavaScript
+
+// let elems = document.querySelectorAll('p')
+// console.log(elems)
+// for(let elem of elems){
+//    let span = document.createElement('samp')
+//    span.textContent = elem.textContent
+//    elem.textContent = ''
+//    elem.appendChild(span)
+//    let decoration = document.createElement('a')
+//    decoration.href = '#'
+//    decoration.textContent = 'click'
+//    elem.appendChild(decoration)
+//    decoration.addEventListener('click', function(){
+//     span.style.textDecoration = 'line-through' 
+//     decoration.remove()
+//    })
+// }
+
+
+
+//Кнопки для скрытия и показа элемента на JavaScript
+let elem = document.querySelector('#elem');
+let show = document.querySelector('#show');
+let hide = document.querySelector('#hide');
+
+show.addEventListener('click', function(){
+    elem.classList.remove('hidden')
+})
+
+hide.addEventListener('click', function(){
+    elem.classList.add('hidden')
+})
 
