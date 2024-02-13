@@ -5428,11 +5428,15 @@ let elem = document.querySelector('#elem');
 let show = document.querySelector('#show');
 let hide = document.querySelector('#hide');
 
-show.addEventListener('click', function(){
-    elem.classList.remove('hidden')
-})
-
 hide.addEventListener('click', function(){
     elem.classList.add('hidden')
+    
 })
+
+show.addEventListener('click', function (){
+    elem.classList.remove('hidden')
+    
+})
+
+
 
