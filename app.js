@@ -5424,19 +5424,191 @@ let list   = document.querySelector('ul');
 
 
 //Кнопки для скрытия и показа элемента на JavaScript
-let elem = document.querySelector('#elem');
-let show = document.querySelector('#show');
-let hide = document.querySelector('#hide');
 
-hide.addEventListener('click', function(){
-    elem.classList.add('hidden')
+// let elem = document.querySelector('#elem');
+// // let show = document.querySelector('#show');
+// // let hide = document.querySelector('#hide');
+// let button = document.getElementById('btn')
+// let isHidden = true;
+
+// button.addEventListener('click', function() {
+//     if (isHidden) {
+//         elem.classList.remove('hidden');
+//     } else {
+//         elem.classList.add('hidden');
+//     }
+//     isHidden = !isHidden;
+// });
+
+// hide.addEventListener('click', function fanc(){
+//     if(elem.classList.add('hidden')){
+//         hide.addEventListener('click', function (){
+//             elem.classList.remove('hidden')
+            
+//         })
+//     }
     
-})
-
-show.addEventListener('click', function (){
-    elem.classList.remove('hidden')
     
-})
+// })
 
+// show.addEventListener('click', function (){
+//     elem.classList.remove('hidden')
+    
+// })
+
+//------------------------------------------------------------
+//___________++++++++++++++++++++++++++++=====================
+
+// navigator.mediaDevices.getUserMedia({video: true})
+// .then(stream => {
+//     let videoplayer = document.getElementById('videoplayer')
+//     videoplayer.srcObject = stream
+//     videoplayer.play()
+
+// })
+// console.log(html.children)
+
+//--------=====================+++++++++++++++++++++++++++++++
+//============================================================
+
+
+//Много элементов с кнопками показа на JavaScript
+
+// let buttons = document.querySelectorAll('button');
+
+// for (let button of buttons) {
+// 	button.addEventListener('click', function() {
+// 		let elem = document.querySelector('#' + this.dataset.elem);
+// 		elem.classList.toggle('hidden');
+// 	});
+// }
+
+
+
+//Активация элементов на JavaScript
+
+
+// let tds = document.querySelectorAll('#table td');
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		this.classList.add('active');
+// 	});
+// }
+
+
+// let ul = document.getElementById('ul')
+// let isAcive = true
+// for(let i = 0; i < 3; i++){
+//     let lis = document.createElement('li')
+//     lis.textContent = 'New texet'
+// lis.addEventListener('click', function(){
+//     // this.classList.add('active')
+//     if(isAcive){
+//         this.classList.add('active')
+//     } else {
+//         this.classList.remove('active')
+//     }
+//     isAcive = !isAcive
+// })
+
+
+//     ul.appendChild(lis)
+// }
+
+
+
+// let tds = document.querySelectorAll('#table td');
+
+// let color = 'color1';
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		if (color == 'color1') {
+// 			color = 'color2'
+// 		} else {
+// 			color = 'color1'
+// 		}
+		
+// 		this.classList.add(color);
+// 	});
+// }
+
+// let tds = document.querySelectorAll('#table td');
+
+// let i = 0;
+// let colors = ['color1', 'color2', 'color3'];
+
+// for (let td of tds) {
+// 	td.addEventListener('click', function() {
+// 		this.classList.add(colors[i]);
+		
+// 		i++;
+// 		if (i == colors.length) {
+// 			i = 0;
+// 		}
+// 	});
+// }
+
+
+//Практика на изменение элементов на JavaScript
+
+
+//////////////////////////////////////////////////////
+// let ul = document.getElementById('ul')
+// let arr = ['one', 'two', 'three', 'four', 'five']
+
+// for(let elem of arr){
+//     let li = document.createElement('li')
+//     console.log(elem)
+//    li.textContent = elem
+//    ul.appendChild(li)
+//    li.addEventListener('click', function fun(){
+//     let input = document.createElement('input')
+    
+//     input.value = li.textContent
+//     li.textContent = ''
+//     li.appendChild(input)
+//     li.removeEventListener('click', fun)
+//     input.addEventListener('blur', function(){
+//         li.textContent = input.value
+//         li.addEventListener('click', fun)           
+//     })
+//    })
+// }
+
+   
+
+//Модифицируйте предыдущую задачу так, чтобы под списком 
+//был инпут, с помощью которого можно будет добавить 
+//новый элемент в конец списка ul. Сделайте так, чтобы новые 
+//li также можно было редактировать.
+
+//1. Создать инпут в html
+//2. Сделать так чтобы при вводе в инпут в конец списка
+//добавлялся новый элкькнт
+//3. Сделать так чтобы новые ли можно было редактировать
+
+
+///////////////////////////////////////
+
+
+// Массив объектов и список
+
+let employees = [
+	{name: 'employee1', age: 30, salary: 400},
+	{name: 'employee2', age: 31, salary: 500},
+	{name: 'employee3', age: 32, salary: 600},
+];
+let ul = document.getElementById('ul')
+for(let employee of employees){
+    console.log(employee)
+    let li = document.createElement('li')
+    for(let elem in employee){
+       console.log(employee{elem}) 
+        li.textContent = elem
+    }
+    //li.textContent = `${employee.name} ${employee.age} ${employee.salary}`
+    ul.appendChild(li)
+}
 
 
