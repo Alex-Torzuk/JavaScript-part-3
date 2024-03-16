@@ -5601,43 +5601,43 @@ let list   = document.querySelector('ul');
 //этого li из списка.
 
 
-let employees = [
-	{name: 'employee1', age: 30, salary: 400},
-	{name: 'employee2', age: 31, salary: 500},
-	{name: 'employee3', age: 32, salary: 600},
-];
+// let employees = [
+// 	{name: 'employee1', age: 30, salary: 400},
+// 	{name: 'employee2', age: 31, salary: 500},
+// 	{name: 'employee3', age: 32, salary: 600},
+// ];
 
-let ul = document.getElementById('ul')
+// let ul = document.getElementById('ul')
 
-for(let employee of employees){
-    console.log(employee)
-    let li = document.createElement('li')
+// for(let employee of employees){
+//     console.log(employee)
+//     let li = document.createElement('li')
   
-    li.textContent = ` name: ${employee.name} 
-    age: ${employee.age} salary: ${employee.salary}  `
+//     li.textContent = ` name: ${employee.name} 
+//     age: ${employee.age} salary: ${employee.salary}  `
 
-    let a  = document.createElement('a')
-    a.href = '#'
-    a.textContent = 'Clean'
-    li.appendChild(a)
-   a.addEventListener('click', function(){
-    li.textContent = ''
-   })
+//     let a  = document.createElement('a')
+//     a.href = '#'
+//     a.textContent = 'Clean'
+//     li.appendChild(a)
+//    a.addEventListener('click', function(){
+//     li.textContent = ''
+//    })
     
-    li.addEventListener('click', function fun(){
-        let input = document.createElement('input')
-        input.value += li.textContent
-        li.textContent = ''
-        li.appendChild(input)
-        li.removeEventListener('click', fun)
-        input.addEventListener('blur', function(){
-            li.textContent = input.value
-            li.addEventListener('click', fun)
-        })
+//     li.addEventListener('click', function fun(){
+//         let input = document.createElement('input')
+//         input.value += li.textContent
+//         li.textContent = ''
+//         li.appendChild(input)
+//         li.removeEventListener('click', fun)
+//         input.addEventListener('blur', function(){
+//             li.textContent = input.value
+//             li.addEventListener('click', fun)
+//         })
 
-    })
-    ul.appendChild(li)
-}
+//     })
+//     ul.appendChild(li)
+// }
 
 
 
@@ -5655,10 +5655,55 @@ for(let employee of employees){
 
 //=======Функции для работы с DOM элементом на JavaScript========
 
-function printValue(x = 'empty'){
-    console.log(x)
-}
-printValue()
-printValue(false)
-printValue(undefined)
-printValue(null)
+
+//Сделайте функцию setAttr, которая будет менять атрибут DOM 
+//элементу. Пусть первым параметром функция принимает селектор 
+//элемента, вторым - имя атрибута, а третьим - его новое значение.
+
+// function setText(id, text) {
+// 	let elem = document.getElementById(id);
+// 	elem.textContent = text;
+// }
+// setText('elem1', 'text1');
+// setText('elem2', 'text2');
+
+
+// function setAttr(select, name, newValue){
+//     let btn = document.querySelector(select)
+//     btn.setAttribute(name, newValue)
+// }
+
+// setAttr('input', "disabled", "disabled")
+
+
+//Функции для работы с группой DOM элементов
+
+//Сделайте функцию appendText, которая первым параметром 
+//будет принимать селектор, а вторым - текст. Сделайте так, 
+//чтобы данная функция добавляла текст в конец переданных элементов.
+
+
+// function setText(selector, text) {
+// 	let elems = document.querySelectorAll(selector);
+	
+// 	for (let elem of elems) {
+// 		elem.textContent = text;
+// 	}
+// }
+
+// setText('.elem', 'text');
+
+// function appendText(selector, texet){
+//     let elems = document.querySelectorAll(selector)
+//     for(let elem of elems){
+
+//         elem.textContent += texet
+//     }
+// }
+// appendText('.elem', '  Hello')
+
+
+
+//Передача коллбэка для работы с DOM на JavaScript
+
+
