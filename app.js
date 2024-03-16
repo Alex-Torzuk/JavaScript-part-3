@@ -5594,21 +5594,71 @@ let list   = document.querySelector('ul');
 
 // Массив объектов и список
 
+//Выведите на экран каждого работника в своем теге li тега ul.
+//Сделайте так, чтобы по клику на имя, возраст или зарплату 
+//работника появлялся инпут для редактирования этого поля.
+//Добавьте в конец каждого тега li ссылку на удаление 
+//этого li из списка.
+
+
 let employees = [
 	{name: 'employee1', age: 30, salary: 400},
 	{name: 'employee2', age: 31, salary: 500},
 	{name: 'employee3', age: 32, salary: 600},
 ];
+
 let ul = document.getElementById('ul')
+
 for(let employee of employees){
     console.log(employee)
     let li = document.createElement('li')
-    for(let elem in employee){
-       console.log(employee{elem}) 
-        li.textContent = elem
-    }
-    //li.textContent = `${employee.name} ${employee.age} ${employee.salary}`
+  
+    li.textContent = ` name: ${employee.name} 
+    age: ${employee.age} salary: ${employee.salary}  `
+
+    let a  = document.createElement('a')
+    a.href = '#'
+    a.textContent = 'Clean'
+    li.appendChild(a)
+   a.addEventListener('click', function(){
+    li.textContent = ''
+   })
+    
+    li.addEventListener('click', function fun(){
+        let input = document.createElement('input')
+        input.value += li.textContent
+        li.textContent = ''
+        li.appendChild(input)
+        li.removeEventListener('click', fun)
+        input.addEventListener('blur', function(){
+            li.textContent = input.value
+            li.addEventListener('click', fun)
+        })
+
+    })
     ul.appendChild(li)
 }
 
 
+
+//Рекурсия
+
+// function recursiveLog(n){
+//     if(n <= 0){
+//         return
+//     }
+//     recursiveLog(n-1)
+//     console.log(n)
+// }
+// recursiveLog(5)
+
+
+//=======Функции для работы с DOM элементом на JavaScript========
+
+function printValue(x = 'empty'){
+    console.log(x)
+}
+printValue()
+printValue(false)
+printValue(undefined)
+printValue(null)
