@@ -5736,11 +5736,130 @@ let list   = document.querySelector('ul');
 
 
 //Передача DOM элемента параметром функции
-function setText(elem, text){
-	elem.textContent = text;
-}
-let elem1 = document.getElementById('elem1');
-setText(elem1, 'text1');
+// function setText(elem, text){
+// 	elem.textContent = text;
+// }
+// let elem1 = document.getElementById('elem1');
+// setText(elem1, 'text1');
 
-let elem2 = document.getElementById('elem2');
-setText(elem2, 'text2');
+// let elem2 = document.getElementById('elem2');
+// setText(elem2, 'text2');
+//=========================
+//Сделайте функцию appendText, которая первым параметром 
+//будет принимать DOM элемент, а вторым - текст. Сделайте 
+//так, чтобы данная функция добавляла текст в конец этого элемента.
+
+// function appendText(elem, text){
+//     elem.append(text)
+// }
+
+// let elem1 = document.getElementById('elem1')
+// console.log(appendText(elem1, 'Lux'))
+
+// let elem2 = document.getElementById('elem2')
+// console.log(appendText(elem2, 'Hunter'))
+
+
+
+
+//============================
+//Даны абзацы. Получите их, переберите циклом и каждому 
+//добавьте в конец '!' с помощью функции appendText, 
+//сделанной в предыдущей задаче.
+
+// function appendText(elem, text){
+//     elem.append(text)
+// }
+
+// let elems = document.getElementsByClassName('elems')
+// for(let elem of elems){
+//     appendText(elem, '!')
+// }
+
+//============================
+
+//Сделайте функцию setValue, которая первым параметром 
+//будет принимать ссылку на инпут, а вторым - текст. 
+//Сделайте так, чтобы данная функция устанавливала переданный 
+//текст в value инпута.
+
+// function setValue(link, text){
+//     link.value = text
+// }
+
+// let input = document.querySelector('input')
+// setValue(input, 'Hello')
+
+
+
+
+
+//Передача группы DOM элементов параметрами функций
+
+
+// function setText(elems, text) {
+// 	for (let elem of elems) {
+// 		elem.textContent = text;
+// 	}
+// }
+// let elems = document.querySelectorAll('.elem');
+// setText(elems, 'text');
+
+
+
+//Сделайте функцию appendText, которая первым параметром 
+//будет принимать массив DOM элементов, а вторым - текст. 
+//Сделайте так, чтобы данная функция добавляла текст в 
+//конец переданных элементов.
+
+// function appendText(elems, text){
+//     for(let elem of elems){
+//         elem.append(text)
+//     }
+// }
+
+// let elems = document.getElementsByClassName('elem')
+// appendText(elems, ' Lux')
+
+
+
+//Сделайте функцию appendElem, которая первым параметром 
+//будет принимать ссылку на DOM объект, в котором лежит 
+//тег ul, а вторым - текст. Сделайте так, чтобы данная 
+//функция создавала новую li с переданным текстом и 
+//добавляла ее в конец переданного тега ul.
+
+// function appendElem(elem, text){
+//     let li = document.createElement('li')
+//     li.textContent = text
+//     elem.appendChild(li)
+// }
+
+// let elem = document.querySelector('ul li')
+// appendElem(elem, 'Hello, Alex')
+
+
+//Дан массив и ul. С помощью функции appendElem, 
+//созданной в предыдущей задаче, запишите каждый элемент 
+//массива в отдельную li в этом ul.
+
+
+// function appendElem(elem, text){
+//     let li = document.createElement('li')
+//     li.textContent = text
+//     elem.appendChild(li)
+// }
+
+// let arrs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// let elems = document.querySelector('ul')
+// for(let arr of arrs){
+//     appendElem(elems, arr)
+
+// }
+
+
+
+//Функция для создания HTML таблиц на JavaScript
+
+
