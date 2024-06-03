@@ -5863,3 +5863,21 @@ let list   = document.querySelector('ul');
 //Функция для создания HTML таблиц на JavaScript
 
 
+let div1 = document.querySelector('#elem1');
+createTable(3, 4, div1);
+
+let div2 = document.querySelector('#elem2');
+createTable(5, 6, div2);
+
+function createTable(rows, cols, parent) {
+	let table = document.createElement('table');
+	
+	// тут создадим таблицу с rows рядами и cols колонками
+	for () {
+		for () {
+			
+		}
+	}
+	
+	parent.appendChild(table);
+}
