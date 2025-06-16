@@ -5863,21 +5863,101 @@ let list   = document.querySelector('ul');
 //Функция для создания HTML таблиц на JavaScript
 
 
-let div1 = document.querySelector('#elem1');
-createTable(3, 4, div1);
+// let div1 = document.querySelector('#elem1');
+// createTable(3, 4, div1);
 
-let div2 = document.querySelector('#elem2');
-createTable(5, 6, div2);
+// let div2 = document.querySelector('#elem2');
+// createTable(5, 6, div2);
 
-function createTable(rows, cols, parent) {
-	let table = document.createElement('table');
+// function createTable(rows, cols, parent) {
+// 	let table = document.createElement('table');
 	
-	// тут создадим таблицу с rows рядами и cols колонками
-	for () {
-		for () {
+// 	// тут создадим таблицу с rows рядами и cols колонками
+// 	for () {
+// 		for () {
 			
-		}
-	}
+// 		}
+// 	}
 	
-	parent.appendChild(table);
-}
+// 	parent.appendChild(table);
+// }
+
+
+
+//++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++++++++++++++++++
+
+
+//Функции для работы с DOM элементом на JavaScript
+
+// function setText(id, text) {
+// 	let elem = document.getElementById(id);
+// 	elem.textContent = text;
+// }
+
+// setText('elem1', 'Hello' )
+// setText('elem2', 'World' )
+
+///
+
+// function setText(sel, text){
+//     let elem = document.querySelector(sel)
+//     elem.textContent = text
+// }
+
+// setText('p', 'Hello')
+// setText('p + p', 'World')
+
+// function setAttr(sel, numeAttr, newName){
+//     let btn = document.querySelector(sel)
+//     btn.setAttribute(numeAttr, newName)
+// }
+
+// setAttr('button', 'disabled', 'disabled')
+
+
+
+
+
+//Функции для работы с группой DOM элементов
+
+
+// function setText(selector, text) {
+// 	let elems = document.querySelectorAll(selector);
+	
+// 	for (let elem of elems) {
+// 		elem.textContent = text;
+// 	}
+// }
+
+// setText('.elem', 'text');
+
+
+// function appendText(select, text){
+//     let addText = document.querySelector(select)
+//     addText.append(text)
+// }
+
+// appendText('p', ' Alex')
+
+
+
+
+
+
+//Передача коллбэка для работы с DOM на JavaScript
+
+// function cube(num) {
+// 	return num ** 3;
+// }
+// let result = each([1, 2, 3, 4, 5], cube);
+// console.log(result);
+
+// function square(num) {
+// 	return num * num;
+// }
+
